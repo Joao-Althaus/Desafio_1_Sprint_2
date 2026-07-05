@@ -11,26 +11,52 @@ This project reads PDF files from a folder, cleans the text, and creates a JSON 
 ### How to install
 
 1. Create a virtual environment.
+``` bash
+python3 -m venv .venv # manually
+# or
+uv sync # using UV if you have it installed
+```
 2. Activate it.
-3. Install the dependencies:
+``` bash
+source .venv/bin/activate # linux and macOS
+# or
+\.venv\Scripts\activate # windows
 
-   pip install -r requirements.txt
+```
+3. Install the dependencies:
+``` bash
+pip install -r requirements.txt # reading requirements.txt
+# uv sync already installs dependencies if you used it
+```
 
 ### How to run
 
+You can run it step by step or just run the **main.py** file in the root of the project.
+
 Run the ingestion step with:
 
-   python3 -m src.ingestion.ingest
+``` bash
+python3 -m src.ingestion.ingest
+# You can also choose a different folder:
+python3 -m src.ingestion.ingest --raw-dir data/raw --processed-dir data/processed
+```
 
-You can also choose a different folder:
+Now run the chunking step with:
 
-   python3 -m src.ingestion.ingest --raw-dir data/raw --processed-dir data/processed
+
+``` bash
+python -m src.chunking.chunking
+# or use the parameters:
+python3 -m src.chunking.chunking --processed-dir data/processed --chunked-dir data/chunked
+```
 
 ### Tests
 
 Run the tests with:
 
-   python3 -m unittest discover -s tests -p 'test_*.py'
+``` bash
+python3 -m unittest discover -s tests -p 'test_*.py'
+```
 
 ## Português (Brasil)
 
@@ -42,24 +68,50 @@ Este projeto lê arquivos PDF de uma pasta, limpa o texto e cria um arquivo JSON
 
 ### Como instalar
 
-1. Crie um ambiente virtual.
+1. Crie um ambiente virtual
+``` bash
+python3 -m venv .venv # manualmente
+# ou
+uv sync # usando o UV caso tenha instalado
+```
 2. Ative o ambiente.
+``` bash
+source .venv/bin/activate # linux e macOS
+# ou
+\.venv\Scripts\activate # windowns
+```
 3. Instale as dependências:
-
-   pip install -r requirements.txt
+``` bash
+pip install -r requirements.txt # lendo o requirements.txt
+# o uv sync já instala as dependências caso usou ele
+```
 
 ### Como executar
 
+Você pode executar passo a passo ou so executar o arquivo **main.py** na raiz do projeto
+
 Execute a etapa de ingestão com:
 
-   python3 -m src.ingestion.ingest
+``` bash
+python3 -m src.ingestion.ingest
+# Você também pode escolher uma pasta diferente:
+python3 -m src.ingestion.ingest --raw-dir data/raw --processed-dir data/processed
+```
 
-Você também pode escolher uma pasta diferente:
+Agora execute a etapa de chunking com
 
-   python3 -m src.ingestion.ingest --raw-dir data/raw --processed-dir data/processed
+``` bash
+python -m src.chunking.chunking
+# ou use os parâmetros
+python3 -m src.chunking.chunking --processed-dir data/processed --chunked-dir data/chunked
+```
+
+
 
 ### Testes
 
 Execute os testes com:
 
-   python3 -m unittest discover -s tests -p 'test_*.py'
+``` bash
+python3 -m unittest discover -s tests -p 'test_*.py'
+```

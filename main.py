@@ -1,6 +1,9 @@
-def main():
-    print("Hello from desafio-1-sprint-2!")
+from src.ingestion import ingest
+from src.chunking import chunking
 
 
-if __name__ == "__main__":
-    main()
+# execute the ingestion process to generate the processed data
+ingest.main()
+
+# execute the chunking process to generate chunks from the processed data
+chunking.main()
