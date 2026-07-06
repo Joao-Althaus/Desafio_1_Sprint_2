@@ -50,6 +50,12 @@ python -m src.chunking.chunking
 python3 -m src.chunking.chunking --processed-dir data/processed --chunked-dir data/chunked
 ```
 
+Now run the embbedings generation step with:
+
+``` bash
+python -m src.embeddings.embedding
+```
+
 ### Tests
 
 Run the tests with:
@@ -106,6 +112,11 @@ python -m src.chunking.chunking
 python3 -m src.chunking.chunking --processed-dir data/processed --chunked-dir data/chunked
 ```
 
+Agora execute a etapa de geração de embbedings com
+
+``` bash
+python -m src.embeddings.embedding
+```
 
 
 ### Testes
