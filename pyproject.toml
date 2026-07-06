@@ -10,4 +10,5 @@ dependencies = [
     "pypdf==6.0.0",
     "tiktoken>=0.13.0",
     "tqdm==4.67.1",
+    "sentence-transformers>=5.1.0",
 ]
