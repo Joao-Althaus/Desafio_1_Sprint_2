@@ -11,4 +11,5 @@ dependencies = [
     "tiktoken>=0.13.0",
     "tqdm==4.67.1",
     "sentence-transformers>=5.1.0",
+    "chromadb>=1.0.0",
 ]

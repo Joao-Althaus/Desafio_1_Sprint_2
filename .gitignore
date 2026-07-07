@@ -222,3 +222,5 @@ __marimo__/
 # documents
 .DS_Store
 data/processed/
+data/vectordb/
+data/embeddings/
