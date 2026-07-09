@@ -53,8 +53,8 @@ def generate_chunks(documents: list[dict]) -> list[dict]:
 
     # Create a text splitter with specified parameters
     splitter = RecursiveCharacterTextSplitter(
-        chunk_size=400,      
-        chunk_overlap=60,    
+        chunk_size=800,      
+        chunk_overlap=200,    
         length_function=lambda text: len(encoding.encode(text)),
         separators=["\n\n", "\n", ". ", "; ", ", ", " "],
     )
