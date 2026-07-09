@@ -117,3 +117,5 @@ websockets==16.0
 xxhash==3.8.1
 yarl==1.24.2
 zstandard==0.25.0
+streamlit==1.59.1
+langchain-ollama==0.3.10
