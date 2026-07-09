@@ -69,7 +69,7 @@ def parse_args() -> argparse.Namespace:
         description="Armazena os embeddings gerados em uma collection do Chroma"
     )
 
-    parser.add_argument("--input-file", type=Path, default=INPUT_FILE)
+    parser.add_argument("--input-file", type=Path, default=EMBEDDING_FILE)
     parser.add_argument("--persist-dir", type=Path, default=DEFAULT_PERSIST_DIR)
     parser.add_argument(
         "--collection-name", type=str, default=DEFAULT_COLLECTION_NAME
@@ -82,7 +82,7 @@ if __name__ == "__main__":
     args = parse_args()
 
     main(
-        embeddings_file=args.embeddings_file,
+        embeddings_file=args.input_file,
         persist_dir=args.persist_dir,
         collection_name=args.collection_name,
     )
