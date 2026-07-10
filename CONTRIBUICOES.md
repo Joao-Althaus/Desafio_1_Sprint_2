@@ -71,5 +71,15 @@ Minha contribuição nesta etapa foi resolver o desafio de quebrar textos longos
 
 #### Contribuição
 
+Realizei uma revisão técnica completa do pipeline RAG, percorrendo todas as etapas -- ingestão de PDFs, chunking, geração de embeddings, indexação no ChromaDB e a chain de geração de respostas com LangChain//Ollama -- identificando bugs, incosistencias e pontos de risco em cada módulo. Também fui resposável por implementar a interface gráfica em streamlit, integrando a chain que já existente para permitir que o usuário faça perguntas e visualize as respostas junto com as fontes/páginas recuperadas dos documentos clínicos.
+
+Principais entregas:
+- Revisão e debug de ponta a ponta do pipeline RAG (ingestão, chunking, embeddings, indexação, geração)
+- Identificação de bugs de execução (ex: erro de parsing de argumentos no script de indexação no ChromaDB)
+- Documento consolidado de debug com sugestões de correção priorizadas
+- Interface gráfica em Streamlit para interação com o sistema RAG
+
 
 #### Reflexão
+
+Debugar o projeto inteiro antes de construir a interface me ajudou a entender de verdade como as peças se conectam — desde como o texto de um PDF vira chunk até como o LLM usa esse contexto pra responder. Percebi como pequenos detalhes (como o nome exato de um modelo no Ollama ou um nome de collection hardcoded) podem quebrar silenciosamente o pipeline, e como decisões na etapa de ingestão e chunking impactam diretamente a qualidade e a confiabilidade das respostas geradas mais à frente. Essa etapa de revisão foi essencial pra eu conseguir desenhar uma interface que realmente refletisse o funcionamento real do sistema, e não só uma camada visual por cima.
