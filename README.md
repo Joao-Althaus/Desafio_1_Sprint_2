@@ -50,9 +50,9 @@ python -m src.embeddings.embedding
 ```
 Now index the embeddings into the local ChromaDB vector store:
 ``` bash
-python -m src.vectordb.index_chunks
+python -m src.vectordb.store
 # or use the parameters:
-python3 -m src.vectordb.index_chunks --embeddings-file data/embeddings/embeddings.json --persist-dir data/vectordb/chroma
+python3 -m src.vectordb.store --embeddings-file data/embeddings/embeddings.json --persist-dir data/vectordb/chroma
 ```
 
 ### Running the assistant (Streamlit interface)
@@ -69,6 +69,15 @@ Run the tests with:
 ``` bash
 python3 -m unittest discover -s tests -p 'test_*.py'
 ```
+
+### Evaluation
+The `eval/` folder contains the RAG evaluation report (`eval/results.md`), comparing the current chunking configuration against an alternative one, with a fidelity/relevance scoring table and a list of unsatisfactory cases.
+
+To reproduce the evaluation, run:
+``` bash
+python -m eval.run_eval --persist-dir data/vectordb/chroma --collection-name clinical_docs --label config_atual
+```
+This runs the test question set from `eval/test_questions.md` against the current RAG chain and saves the raw answers to `eval/raw_results_config_atual.json`.
 
 ## Português (Brasil)
 Este projeto é um exemplo simples de um assistente clínico RAG. Ele lê arquivos PDF, prepara o texto, armazena o resultado em um banco de dados vetorial e usa um LLM local (via Ollama) para responder perguntas clínicas com base nos documentos recuperados.
@@ -120,9 +129,9 @@ python -m src.embeddings.embedding
 ```
 Agora indexe os embeddings no banco de dados vetorial local (ChromaDB):
 ``` bash
-python -m src.vectordb.index_chunks
+python -m src.vectordb.store
 # ou use os parâmetros:
-python3 -m src.vectordb.index_chunks --embeddings-file data/embeddings/embeddings.json --persist-dir data/vectordb/chroma
+python3 -m src.vectordb.store --embeddings-file data/embeddings/embeddings.json --persist-dir data/vectordb/chroma
 ```
 
 ### Executando o assistente (interface Streamlit)
@@ -139,3 +148,12 @@ Execute os testes com:
 ``` bash
 python3 -m unittest discover -s tests -p 'test_*.py'
 ```
+
+### Avaliação
+A pasta `eval/` contém o relatório de avaliação do RAG (`eval/results.md`), comparando a configuração atual de chunking com uma alternativa, com tabela de fidelidade/relevância e lista de casos insatisfatórios.
+
+Para reproduzir a avaliação, execute:
+``` bash
+python -m eval.run_eval --persist-dir data/vectordb/chroma --collection-name clinical_docs --label config_atual
+```
+Isso roda o conjunto de perguntas de teste de `eval/test_questions.md` contra a chain RAG atual e salva as respostas brutas em `eval/raw_results_config_atual.json`.
