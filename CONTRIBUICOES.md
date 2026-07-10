@@ -6,9 +6,26 @@
 
 #### Contribuição
 
+Fiquei responsável pela etapa de geração dos embeddings do pipeline RAG. Implementei o carregamento do modelo de embeddings utilizando a biblioteca Sentence Transformers, escolhendo o modelo paraphrase-multilingual-MiniLM-L12-v2 por oferecer bom desempenho em textos em português e facilidade de integração ao projeto.
+
+Desenvolvi o pipeline responsável por ler os chunks previamente gerados, transformar cada trecho de texto em sua representação vetorial (embedding), normalizar os vetores para otimizar futuras buscas por similaridade e salvar o resultado em um arquivo JSON contendo o texto, o vetor gerado, os metadados e o hash de conteúdo de cada chunk. Além disso, organizei a implementação de forma modular, separando o carregamento do modelo da lógica de geração dos embeddings, facilitando a manutenção e futuras substituições do modelo utilizado.
+
+Também desenvolvi testes unitários utilizando mocks para simular o comportamento do modelo de embeddings, garantindo que o pipeline gerasse corretamente o arquivo de saída e preservasse todas as informações necessárias para as próximas etapas do sistema. Por fim, atualizei a documentação do projeto com as instruções de execução da etapa de embeddings.
+
+Principais entregas:
+- Implementação do pipeline de geração de embeddings
+- Integração com o modelo Sentence Transformers (paraphrase-multilingual-MiniLM-L12-v2)
+- Normalização dos vetores para recuperação semântica
+- Exportação dos embeddings para arquivo JSON
+- Organização modular do carregamento do modelo e da geração dos vetores
+- Testes unitários para validação da etapa de embeddings
+- Atualização da documentação de execução
 
 #### Reflexão
 
+Durante o desenvolvimento, compreendi melhor como os embeddings representam o significado dos textos e por que essa etapa é essencial para que o sistema encontre trechos relevantes mesmo quando a pergunta do usuário utiliza palavras diferentes das presentes nos documentos.
+
+Além do aprendizado sobre modelos de embeddings e busca semântica, também adquiri experiência na organização de código modular, na criação de testes unitários utilizando mocks e na integração de bibliotecas voltadas para Inteligência Artificial. Essa atividade reforçou minha compreensão sobre o funcionamento interno de pipelines RAG, principalmente sobre a relação entre chunking, geração de embeddings e busca semântica, e mostrou como cada etapa influencia diretamente a qualidade das respostas que serão geradas pelo assistente clínico.
 
 ### **Cleidyanne Castro Pereira**
 
@@ -33,17 +50,27 @@ Minha principal contribuição foi transformar os documentos clínicos brutos em
 
 #### Contribuição
 
+Implementei o armazenamento vetorial em src/vectordb/, dividido em client.py (conexão persistente com o Chroma e collection com métrica de cosseno), store.py (lê o embeddings.json e faz upsert em batch, de forma idempotente) e query.py (busca semântica por texto puro, com filtros por documento e por termo exato, além de recuperação de chunks vizinhos). O modelo de embeddings é carregado internamente na busca, garantindo o mesmo espaço vetorial usado na indexação. Também escrevi os testes unitários com Chroma em memória, integrei essa etapa ao main.py e corrigi um bug de encoding no app.py.
 
 #### Reflexão
 
+Aprendi que um banco vetorial exige mais do que "guardar números": a métrica de distância e a consistência do modelo entre indexação e busca são decisões que, se erradas, degradam a qualidade das respostas de forma silenciosa, um risco sério num assistente clínico. Por isso priorizei testes de idempotência e integridade de metadata, deixando essa base confiável pro resto da squad construir o agente de recuperação em cima.
 
 ### **José Ivanildo de Oliveira Marques**
 
 #### Contribuição
+Fiquei responsável por construir o 'cérebro' do nosso sistema, integrando a LLM(Ollama) ao banco vetorial através do LangChain para consolidar o pipeline RAG. Essa estrutura agora permite a busca inteligente de informações nos PDFs para responder às perguntas do usuário. Para garantir a segurança e a coerência dos resultados, implementei Templates de Prompt com regras estritas e criei um filtro de contexto. Isso impede que a IA misture dados de documentos ou estudos diferentes, eliminando possíveis alucinações e desvios de foco por parte da LLM.
 
+Principais Entregas:
+- O pipeline RAG e o filtro em Python que barra a mistura de dados e estudos vizinhos.
+- Ajustes no salvamento e leitura para garantir que a numeração das páginas seja guardada de forma mais eficiente.
+- Criação dos testes integrados que simulam perguntas e validam se o motor RAG está respondendo com precisão e sem alucinar.
+- Criação e calibração dos templates de prompt com regras estritas de comportamento para evitar desvios da IA.
 
 #### Reflexão
+O maior aprendizado nessa entrega foi perceber que quando lidamos com dados muito específicos (bulas e estudos clínicos), a engenharia de prompt sozinha não faz milagre. No início, parecia que o desafio seria apenas conectar as ferramentas, mas quando os blocos de estudos diferentes começaram a se misturar, ficou claro que precisava de um controle mais rígido por parte do código.
 
+Desenvolver o filtro de contexto me mostrou que a confiabilidade de um sistema RAG depende muito mais de como a gente trata e blinda o dado do que do modelo de IA em si. Entregar um pipeline que roda local, não alucina e respeita rigorosamente as fontes foi um desafio que me trouxe muitos aprendizados.
 
 ### **Kaique Silva Sousa**
 
@@ -81,5 +108,4 @@ Principais entregas:
 
 
 #### Reflexão
-
 Debugar o projeto inteiro antes de construir a interface me ajudou a entender de verdade como as peças se conectam — desde como o texto de um PDF vira chunk até como o LLM usa esse contexto pra responder. Percebi como pequenos detalhes (como o nome exato de um modelo no Ollama ou um nome de collection hardcoded) podem quebrar silenciosamente o pipeline, e como decisões na etapa de ingestão e chunking impactam diretamente a qualidade e a confiabilidade das respostas geradas mais à frente. Essa etapa de revisão foi essencial pra eu conseguir desenhar uma interface que realmente refletisse o funcionamento real do sistema, e não só uma camada visual por cima.
