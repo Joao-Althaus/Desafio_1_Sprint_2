@@ -6,9 +6,26 @@
 
 #### Contribuição
 
+Fiquei responsável pela etapa de geração dos embeddings do pipeline RAG. Implementei o carregamento do modelo de embeddings utilizando a biblioteca Sentence Transformers, escolhendo o modelo paraphrase-multilingual-MiniLM-L12-v2 por oferecer bom desempenho em textos em português e facilidade de integração ao projeto.
+
+Desenvolvi o pipeline responsável por ler os chunks previamente gerados, transformar cada trecho de texto em sua representação vetorial (embedding), normalizar os vetores para otimizar futuras buscas por similaridade e salvar o resultado em um arquivo JSON contendo o texto, o vetor gerado, os metadados e o hash de conteúdo de cada chunk. Além disso, organizei a implementação de forma modular, separando o carregamento do modelo da lógica de geração dos embeddings, facilitando a manutenção e futuras substituições do modelo utilizado.
+
+Também desenvolvi testes unitários utilizando mocks para simular o comportamento do modelo de embeddings, garantindo que o pipeline gerasse corretamente o arquivo de saída e preservasse todas as informações necessárias para as próximas etapas do sistema. Por fim, atualizei a documentação do projeto com as instruções de execução da etapa de embeddings.
+
+Principais entregas:
+- Implementação do pipeline de geração de embeddings
+- Integração com o modelo Sentence Transformers (paraphrase-multilingual-MiniLM-L12-v2)
+- Normalização dos vetores para recuperação semântica
+- Exportação dos embeddings para arquivo JSON
+- Organização modular do carregamento do modelo e da geração dos vetores
+- Testes unitários para validação da etapa de embeddings
+- Atualização da documentação de execução
 
 #### Reflexão
 
+Durante o desenvolvimento, compreendi melhor como os embeddings representam o significado dos textos e por que essa etapa é essencial para que o sistema encontre trechos relevantes mesmo quando a pergunta do usuário utiliza palavras diferentes das presentes nos documentos.
+
+Além do aprendizado sobre modelos de embeddings e busca semântica, também adquiri experiência na organização de código modular, na criação de testes unitários utilizando mocks e na integração de bibliotecas voltadas para Inteligência Artificial. Essa atividade reforçou minha compreensão sobre o funcionamento interno de pipelines RAG, principalmente sobre a relação entre chunking, geração de embeddings e busca semântica, e mostrou como cada etapa influencia diretamente a qualidade das respostas que serão geradas pelo assistente clínico.
 
 ### **Cleidyanne Castro Pereira**
 
