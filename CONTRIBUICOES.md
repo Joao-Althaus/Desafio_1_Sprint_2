@@ -33,9 +33,11 @@ Minha principal contribuição foi transformar os documentos clínicos brutos em
 
 #### Contribuição
 
+Implementei o armazenamento vetorial em src/vectordb/, dividido em client.py (conexão persistente com o Chroma e collection com métrica de cosseno), store.py (lê o embeddings.json e faz upsert em batch, de forma idempotente) e query.py (busca semântica por texto puro, com filtros por documento e por termo exato, além de recuperação de chunks vizinhos). O modelo de embeddings é carregado internamente na busca, garantindo o mesmo espaço vetorial usado na indexação. Também escrevi os testes unitários com Chroma em memória, integrei essa etapa ao main.py e corrigi um bug de encoding no app.py.
 
 #### Reflexão
 
+Aprendi que um banco vetorial exige mais do que "guardar números": a métrica de distância e a consistência do modelo entre indexação e busca são decisões que, se erradas, degradam a qualidade das respostas de forma silenciosa, um risco sério num assistente clínico. Por isso priorizei testes de idempotência e integridade de metadata, deixando essa base confiável pro resto da squad construir o agente de recuperação em cima.
 
 ### **José Ivanildo de Oliveira Marques**
 
