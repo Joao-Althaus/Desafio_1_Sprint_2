@@ -108,5 +108,4 @@ Principais entregas:
 
 
 #### Reflexão
-
 Debugar o projeto inteiro antes de construir a interface me ajudou a entender de verdade como as peças se conectam — desde como o texto de um PDF vira chunk até como o LLM usa esse contexto pra responder. Percebi como pequenos detalhes (como o nome exato de um modelo no Ollama ou um nome de collection hardcoded) podem quebrar silenciosamente o pipeline, e como decisões na etapa de ingestão e chunking impactam diretamente a qualidade e a confiabilidade das respostas geradas mais à frente. Essa etapa de revisão foi essencial pra eu conseguir desenhar uma interface que realmente refletisse o funcionamento real do sistema, e não só uma camada visual por cima.
