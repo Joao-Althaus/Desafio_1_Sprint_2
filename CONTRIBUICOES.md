@@ -40,10 +40,18 @@ Minha principal contribuição foi transformar os documentos clínicos brutos em
 ### **José Ivanildo de Oliveira Marques**
 
 #### Contribuição
+Fiquei responsável por construir o 'cérebro' do nosso sistema, integrando a LLM(Ollama) ao banco vetorial através do LangChain para consolidar o pipeline RAG. Essa estrutura agora permite a busca inteligente de informações nos PDFs para responder às perguntas do usuário. Para garantir a segurança e a coerência dos resultados, implementei Templates de Prompt com regras estritas e criei um filtro de contexto. Isso impede que a IA misture dados de documentos ou estudos diferentes, eliminando possíveis alucinações e desvios de foco por parte da LLM.
 
+Principais Entregas:
+- O pipeline RAG e o filtro em Python que barra a mistura de dados e estudos vizinhos.
+- Ajustes no salvamento e leitura para garantir que a numeração das páginas seja guardada de forma mais eficiente.
+- Criação dos testes integrados que simulam perguntas e validam se o motor RAG está respondendo com precisão e sem alucinar.
+- Criação e calibração dos templates de prompt com regras estritas de comportamento para evitar desvios da IA.
 
 #### Reflexão
+O maior aprendizado nessa entrega foi perceber que quando lidamos com dados muito específicos (bulas e estudos clínicos), a engenharia de prompt sozinha não faz milagre. No início, parecia que o desafio seria apenas conectar as ferramentas, mas quando os blocos de estudos diferentes começaram a se misturar, ficou claro que precisava de um controle mais rígido por parte do código.
 
+Desenvolver o filtro de contexto me mostrou que a confiabilidade de um sistema RAG depende muito mais de como a gente trata e blinda o dado do que do modelo de IA em si. Entregar um pipeline que roda local, não alucina e respeita rigorosamente as fontes foi um desafio que me trouxe muitos aprendizados.
 
 ### **Kaique Silva Sousa**
 
