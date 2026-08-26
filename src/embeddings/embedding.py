@@ -17,6 +17,7 @@ def main(
     input_file: Path | None = None,
     output_dir: Path | None = None,
     output_file: Path | None = None,
+    model_name: str | None = None,
 ):
 
     input_file = input_file or INPUT_FILE
@@ -34,7 +35,7 @@ def main(
 
     print(f"{len(chunks)} chunks encontrados.")
 
-    model = load_embedding_model()
+    model = load_embedding_model(model_name) if model_name else load_embedding_model()
 
     texts = [chunk["text"] for chunk in chunks]
 
@@ -82,6 +83,12 @@ def parse_args():
     parser = argparse.ArgumentParser()
 
     parser.add_argument(
+        "--model",
+        type=str,
+        default=None,
+    )
+
+    parser.add_argument(
         "--input-file",
         type=Path,
         default=INPUT_FILE,
@@ -110,4 +117,5 @@ if __name__ == "__main__":
         input_file=args.input_file,
         output_dir=args.output_dir,
         output_file=args.output_file,
+        model_name=args.model,
     )

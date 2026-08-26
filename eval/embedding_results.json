@@ -1,0 +1,490 @@
+[
+  {
+    "metrics": {
+      "model": "sentence-transformers/paraphrase-multilingual-MiniLM-L12-v2",
+      "num_queries": 8,
+      "hit@1": 0.375,
+      "hit@3": 0.375,
+      "hit@5": 0.375,
+      "mrr": 0.3850531862664807
+    },
+    "queries": [
+      {
+        "query": "O que é a Hipertensão Arterial Sistêmica (HAS)?",
+        "hit@1": 1,
+        "hit@3": 1,
+        "hit@5": 1,
+        "reciprocal_rank": 1.0,
+        "top_results": [
+          [
+            "hipertensão_arterial_sistêmica_protocolo_chunk_1",
+            0.7198894023895264
+          ],
+          [
+            "hipertensão_arterial_sistêmica_protocolo_chunk_99",
+            0.6079548597335815
+          ],
+          [
+            "hipertensão_arterial_sistêmica_protocolo_chunk_201",
+            0.5708049535751343
+          ],
+          [
+            "hipertensão_arterial_sistêmica_protocolo_chunk_92",
+            0.5555848479270935
+          ],
+          [
+            "hipertensão_arterial_sistêmica_protocolo_chunk_25",
+            0.5550887584686279
+          ]
+        ]
+      },
+      {
+        "query": "Quais são alguns dos fatores de risco específicos para hipertensão arterial sistêmica?",
+        "hit@1": 0,
+        "hit@3": 0,
+        "hit@5": 0,
+        "reciprocal_rank": 0.009523809523809525,
+        "top_results": [
+          [
+            "hipertensão_arterial_sistêmica_protocolo_chunk_25",
+            0.7107342481613159
+          ],
+          [
+            "hipertensão_arterial_sistêmica_protocolo_chunk_172",
+            0.6725183725357056
+          ],
+          [
+            "hipertensão_arterial_sistêmica_protocolo_chunk_1",
+            0.648370087146759
+          ],
+          [
+            "hipertensão_arterial_sistêmica_protocolo_chunk_20",
+            0.6436240673065186
+          ],
+          [
+            "hipertensão_arterial_sistêmica_protocolo_chunk_83",
+            0.6319464445114136
+          ]
+        ]
+      },
+      {
+        "query": "Quais estratégias de prevenção são recomendadas no contexto da hipertensão arterial sistêmica?",
+        "hit@1": 0,
+        "hit@3": 0,
+        "hit@5": 0,
+        "reciprocal_rank": 0.006711409395973154,
+        "top_results": [
+          [
+            "hipertensão_arterial_sistêmica_protocolo_chunk_83",
+            0.6870071887969971
+          ],
+          [
+            "hipertensão_arterial_sistêmica_protocolo_chunk_166",
+            0.6672860383987427
+          ],
+          [
+            "hipertensão_arterial_sistêmica_protocolo_chunk_25",
+            0.6480972170829773
+          ],
+          [
+            "hipertensão_arterial_sistêmica_protocolo_chunk_172",
+            0.638150691986084
+          ],
+          [
+            "hipertensão_arterial_sistêmica_protocolo_chunk_20",
+            0.6381313800811768
+          ]
+        ]
+      },
+      {
+        "query": "Como deve ser realizada a avaliação do risco cardiovascular em indivíduos com hipertensão arterial?",
+        "hit@1": 0,
+        "hit@3": 0,
+        "hit@5": 0,
+        "reciprocal_rank": 0.01020408163265306,
+        "top_results": [
+          [
+            "hipertensão_arterial_sistêmica_protocolo_chunk_25",
+            0.6792193651199341
+          ],
+          [
+            "hipertensão_arterial_sistêmica_protocolo_chunk_137",
+            0.6410411596298218
+          ],
+          [
+            "hipertensão_arterial_sistêmica_protocolo_chunk_172",
+            0.6293469071388245
+          ],
+          [
+            "hipertensão_arterial_sistêmica_protocolo_chunk_83",
+            0.6176658868789673
+          ],
+          [
+            "hipertensão_arterial_sistêmica_protocolo_chunk_168",
+            0.6146968603134155
+          ]
+        ]
+      },
+      {
+        "query": "Qual ferramenta é recomendada atualmente no Brasil para estratificação do risco cardiovascular em indivíduos entre 40 e 74 anos?",
+        "hit@1": 0,
+        "hit@3": 0,
+        "hit@5": 0,
+        "reciprocal_rank": 0.037037037037037035,
+        "top_results": [
+          [
+            "hipertensão_arterial_sistêmica_protocolo_chunk_140",
+            0.7890798449516296
+          ],
+          [
+            "hipertensão_arterial_sistêmica_protocolo_chunk_137",
+            0.726521372795105
+          ],
+          [
+            "hipertensão_arterial_sistêmica_protocolo_chunk_207",
+            0.717881441116333
+          ],
+          [
+            "hipertensão_arterial_sistêmica_protocolo_chunk_199",
+            0.6826394200325012
+          ],
+          [
+            "hipertensão_arterial_sistêmica_protocolo_chunk_52",
+            0.6696114540100098
+          ]
+        ]
+      },
+      {
+        "query": "Quais são os valores de pressão arterial utilizados para o diagnóstico de hipertensão arterial no consultório clínico?",
+        "hit@1": 0,
+        "hit@3": 0,
+        "hit@5": 0,
+        "reciprocal_rank": 0.01694915254237288,
+        "top_results": [
+          [
+            "hipertensão_arterial_sistêmica_protocolo_chunk_168",
+            0.753522515296936
+          ],
+          [
+            "hipertensão_arterial_sistêmica_protocolo_chunk_200",
+            0.6952818632125854
+          ],
+          [
+            "hipertensão_arterial_sistêmica_protocolo_chunk_220",
+            0.6631383299827576
+          ],
+          [
+            "hipertensão_arterial_sistêmica_protocolo_chunk_43",
+            0.6579906344413757
+          ],
+          [
+            "hipertensão_arterial_sistêmica_protocolo_chunk_25",
+            0.6508321762084961
+          ]
+        ]
+      },
+      {
+        "query": "Quais condições podem indicar hipertensão arterial secundária?",
+        "hit@1": 1,
+        "hit@3": 1,
+        "hit@5": 1,
+        "reciprocal_rank": 1.0,
+        "top_results": [
+          [
+            "hipertensão_arterial_sistêmica_protocolo_chunk_25",
+            0.7400554418563843
+          ],
+          [
+            "hipertensão_arterial_sistêmica_protocolo_chunk_172",
+            0.6648651957511902
+          ],
+          [
+            "hipertensão_arterial_sistêmica_protocolo_chunk_44",
+            0.652738094329834
+          ],
+          [
+            "hipertensão_arterial_sistêmica_protocolo_chunk_189",
+            0.6478759050369263
+          ],
+          [
+            "hipertensão_arterial_sistêmica_protocolo_chunk_1",
+            0.6462017297744751
+          ]
+        ]
+      },
+      {
+        "query": "Quais exames podem ser utilizados na investigação da apneia obstrutiva do sono em pacientes com suspeita de hipertensão arterial secundária?",
+        "hit@1": 1,
+        "hit@3": 1,
+        "hit@5": 1,
+        "reciprocal_rank": 1.0,
+        "top_results": [
+          [
+            "hipertensão_arterial_sistêmica_protocolo_chunk_25",
+            0.6700120568275452
+          ],
+          [
+            "hipertensão_arterial_sistêmica_protocolo_chunk_35",
+            0.6530171632766724
+          ],
+          [
+            "hipertensão_arterial_sistêmica_protocolo_chunk_34",
+            0.6390130519866943
+          ],
+          [
+            "hipertensão_arterial_sistêmica_protocolo_chunk_38",
+            0.5698769092559814
+          ],
+          [
+            "hipertensão_arterial_sistêmica_protocolo_chunk_10",
+            0.5543081760406494
+          ]
+        ]
+      }
+    ]
+  },
+  {
+    "metrics": {
+      "model": "sentence-transformers/distiluse-base-multilingual-cased-v2",
+      "num_queries": 8,
+      "hit@1": 0.0,
+      "hit@3": 0.25,
+      "hit@5": 0.25,
+      "mrr": 0.12454604908552276
+    },
+    "queries": [
+      {
+        "query": "O que é a Hipertensão Arterial Sistêmica (HAS)?",
+        "hit@1": 0,
+        "hit@3": 1,
+        "hit@5": 1,
+        "reciprocal_rank": 0.5,
+        "top_results": [
+          [
+            "hipertensão_arterial_sistêmica_protocolo_chunk_31",
+            0.4385029673576355
+          ],
+          [
+            "hipertensão_arterial_sistêmica_protocolo_chunk_1",
+            0.4172299802303314
+          ],
+          [
+            "hipertensão_arterial_sistêmica_protocolo_chunk_32",
+            0.40948036313056946
+          ],
+          [
+            "hipertensão_arterial_sistêmica_protocolo_chunk_190",
+            0.39689087867736816
+          ],
+          [
+            "hipertensão_arterial_sistêmica_protocolo_chunk_179",
+            0.39577120542526245
+          ]
+        ]
+      },
+      {
+        "query": "Quais são alguns dos fatores de risco específicos para hipertensão arterial sistêmica?",
+        "hit@1": 0,
+        "hit@3": 0,
+        "hit@5": 0,
+        "reciprocal_rank": 0.013333333333333334,
+        "top_results": [
+          [
+            "hipertensão_arterial_sistêmica_protocolo_chunk_160",
+            0.45473170280456543
+          ],
+          [
+            "losartana_bula_profissional_chunk_8",
+            0.44664913415908813
+          ],
+          [
+            "hipertensão_arterial_sistêmica_protocolo_chunk_46",
+            0.4360637962818146
+          ],
+          [
+            "hipertensão_arterial_sistêmica_protocolo_chunk_107",
+            0.42225927114486694
+          ],
+          [
+            "hipertensão_arterial_sistêmica_protocolo_chunk_158",
+            0.4106103479862213
+          ]
+        ]
+      },
+      {
+        "query": "Quais estratégias de prevenção são recomendadas no contexto da hipertensão arterial sistêmica?",
+        "hit@1": 0,
+        "hit@3": 0,
+        "hit@5": 0,
+        "reciprocal_rank": 0.006756756756756757,
+        "top_results": [
+          [
+            "hipertensão_arterial_sistêmica_protocolo_chunk_137",
+            0.41575318574905396
+          ],
+          [
+            "hipertensão_arterial_sistêmica_protocolo_chunk_167",
+            0.41381150484085083
+          ],
+          [
+            "hipertensão_arterial_sistêmica_protocolo_chunk_109",
+            0.39835304021835327
+          ],
+          [
+            "hipertensão_arterial_sistêmica_protocolo_chunk_168",
+            0.3912326693534851
+          ],
+          [
+            "hipertensão_arterial_sistêmica_protocolo_chunk_143",
+            0.386120080947876
+          ]
+        ]
+      },
+      {
+        "query": "Como deve ser realizada a avaliação do risco cardiovascular em indivíduos com hipertensão arterial?",
+        "hit@1": 0,
+        "hit@3": 0,
+        "hit@5": 0,
+        "reciprocal_rank": 0.018518518518518517,
+        "top_results": [
+          [
+            "hipertensão_arterial_sistêmica_protocolo_chunk_137",
+            0.45323216915130615
+          ],
+          [
+            "hipertensão_arterial_sistêmica_protocolo_chunk_22",
+            0.43936118483543396
+          ],
+          [
+            "hipertensão_arterial_sistêmica_protocolo_chunk_140",
+            0.4380803406238556
+          ],
+          [
+            "losartana_bula_profissional_chunk_8",
+            0.43037956953048706
+          ],
+          [
+            "hipertensão_arterial_sistêmica_protocolo_chunk_19",
+            0.42205819487571716
+          ]
+        ]
+      },
+      {
+        "query": "Qual ferramenta é recomendada atualmente no Brasil para estratificação do risco cardiovascular em indivíduos entre 40 e 74 anos?",
+        "hit@1": 0,
+        "hit@3": 0,
+        "hit@5": 0,
+        "reciprocal_rank": 0.05263157894736842,
+        "top_results": [
+          [
+            "hipertensão_arterial_sistêmica_protocolo_chunk_140",
+            0.5242069959640503
+          ],
+          [
+            "hipertensão_arterial_sistêmica_protocolo_chunk_137",
+            0.4601418972015381
+          ],
+          [
+            "hipertensão_arterial_sistêmica_protocolo_chunk_55",
+            0.4372701048851013
+          ],
+          [
+            "hipertensão_arterial_sistêmica_protocolo_chunk_207",
+            0.4074968695640564
+          ],
+          [
+            "hipertensão_arterial_sistêmica_protocolo_chunk_146",
+            0.4025861620903015
+          ]
+        ]
+      },
+      {
+        "query": "Quais são os valores de pressão arterial utilizados para o diagnóstico de hipertensão arterial no consultório clínico?",
+        "hit@1": 0,
+        "hit@3": 0,
+        "hit@5": 0,
+        "reciprocal_rank": 0.03333333333333333,
+        "top_results": [
+          [
+            "hipertensão_arterial_sistêmica_protocolo_chunk_168",
+            0.5066866874694824
+          ],
+          [
+            "hipertensão_arterial_sistêmica_protocolo_chunk_189",
+            0.4865568280220032
+          ],
+          [
+            "hipertensão_arterial_sistêmica_protocolo_chunk_167",
+            0.4706500768661499
+          ],
+          [
+            "hipertensão_arterial_sistêmica_protocolo_chunk_200",
+            0.4507485032081604
+          ],
+          [
+            "hipertensão_arterial_sistêmica_protocolo_chunk_160",
+            0.4479122757911682
+          ]
+        ]
+      },
+      {
+        "query": "Quais condições podem indicar hipertensão arterial secundária?",
+        "hit@1": 0,
+        "hit@3": 0,
+        "hit@5": 0,
+        "reciprocal_rank": 0.038461538461538464,
+        "top_results": [
+          [
+            "hipertensão_arterial_sistêmica_protocolo_chunk_44",
+            0.4844515919685364
+          ],
+          [
+            "hipertensão_arterial_sistêmica_protocolo_chunk_43",
+            0.4617840647697449
+          ],
+          [
+            "hipertensão_arterial_sistêmica_protocolo_chunk_160",
+            0.4296141564846039
+          ],
+          [
+            "hipertensão_arterial_sistêmica_protocolo_chunk_189",
+            0.41165512800216675
+          ],
+          [
+            "hipertensão_arterial_sistêmica_protocolo_chunk_107",
+            0.41139400005340576
+          ]
+        ]
+      },
+      {
+        "query": "Quais exames podem ser utilizados na investigação da apneia obstrutiva do sono em pacientes com suspeita de hipertensão arterial secundária?",
+        "hit@1": 0,
+        "hit@3": 1,
+        "hit@5": 1,
+        "reciprocal_rank": 0.3333333333333333,
+        "top_results": [
+          [
+            "hipertensão_arterial_sistêmica_protocolo_chunk_155",
+            0.40141260623931885
+          ],
+          [
+            "hipertensão_arterial_sistêmica_protocolo_chunk_213",
+            0.4009242057800293
+          ],
+          [
+            "hipertensão_arterial_sistêmica_protocolo_chunk_25",
+            0.39835116267204285
+          ],
+          [
+            "hipertensão_arterial_sistêmica_protocolo_chunk_34",
+            0.3898657560348511
+          ],
+          [
+            "hipertensão_arterial_sistêmica_protocolo_chunk_215",
+            0.38604000210762024
+          ]
+        ]
+      }
+    ]
+  }
+]

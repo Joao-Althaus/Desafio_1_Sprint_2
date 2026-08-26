@@ -1,0 +1,58 @@
+[
+  {
+    "id": "eval_001",
+    "question": "O que é a Hipertensão Arterial Sistêmica (HAS)?",
+    "expected_answer": "A Hipertensão Arterial Sistêmica é uma doença crônica de causa multifatorial caracterizada por níveis elevados e sustentados de pressão arterial.",
+    "source_chunk_id": "hipertensão_arterial_sistêmica_protocolo_chunk_1",
+    "category": "definição"
+  },
+  {
+    "id": "eval_002",
+    "question": "Quais são alguns dos fatores de risco específicos para hipertensão arterial sistêmica?",
+    "expected_answer": "Entre os fatores de risco estão idade, sexo masculino, sobrepeso ou obesidade, hiperglicemia, ingestão elevada de sódio, consumo elevado de bebidas alcoólicas, tabagismo, inatividade física e apneia obstrutiva do sono.",
+    "source_chunk_id": "hipertensão_arterial_sistêmica_protocolo_chunk_2",
+    "category": "fatores_de_risco"
+  },
+  {
+    "id": "eval_003",
+    "question": "Quais estratégias de prevenção são recomendadas no contexto da hipertensão arterial sistêmica?",
+    "expected_answer": "As estratégias incluem alimentação adequada e saudável com redução do consumo de sódio e alimentos ultraprocessados, controle do peso corporal, prática regular de atividade física, redução ou cessação do consumo de bebidas alcoólicas e prevenção e cessação do tabagismo.",
+    "source_chunk_id": "hipertensão_arterial_sistêmica_protocolo_chunk_5",
+    "category": "prevenção"
+  },
+  {
+    "id": "eval_004",
+    "question": "Como deve ser realizada a avaliação do risco cardiovascular em indivíduos com hipertensão arterial?",
+    "expected_answer": "A avaliação do risco cardiovascular deve ser realizada antes e durante o tratamento medicamentoso da hipertensão arterial, anualmente, utilizando uma ferramenta validada.",
+    "source_chunk_id": "hipertensão_arterial_sistêmica_protocolo_chunk_11",
+    "category": "risco_cardiovascular"
+  },
+  {
+    "id": "eval_005",
+    "question": "Qual ferramenta é recomendada atualmente no Brasil para estratificação do risco cardiovascular em indivíduos entre 40 e 74 anos?",
+    "expected_answer": "Recomenda-se o uso da calculadora da Iniciativa HEARTS/OPAS/OMS, que demonstrou melhor calibração para a população brasileira.",
+    "source_chunk_id": "hipertensão_arterial_sistêmica_protocolo_chunk_13",
+    "category": "risco_cardiovascular"
+  },
+  {
+    "id": "eval_006",
+    "question": "Quais são os valores de pressão arterial utilizados para o diagnóstico de hipertensão arterial no consultório clínico?",
+    "expected_answer": "O diagnóstico ocorre quando os valores da pressão arterial permanecem maiores ou iguais a 140 mmHg para a pressão arterial sistólica ou maiores ou iguais a 90 mmHg para a pressão arterial diastólica.",
+    "source_chunk_id": "hipertensão_arterial_sistêmica_protocolo_chunk_16",
+    "category": "diagnóstico"
+  },
+  {
+    "id": "eval_007",
+    "question": "Quais condições podem indicar hipertensão arterial secundária?",
+    "expected_answer": "Entre os achados que podem indicar hipertensão arterial secundária estão edema, anemia, anorexia, fadiga, níveis elevados de creatinina e ureia, alterações do sedimento urinário ou exames de imagem, além de hipertensão de aparecimento súbito ou piora sem causa aparente.",
+    "source_chunk_id": "hipertensão_arterial_sistêmica_protocolo_chunk_25",
+    "category": "hipertensão_secundária"
+  },
+  {
+    "id": "eval_008",
+    "question": "Quais exames podem ser utilizados na investigação da apneia obstrutiva do sono em pacientes com suspeita de hipertensão arterial secundária?",
+    "expected_answer": "Podem ser utilizados exames objetivos, como a polissonografia em ambiente hospitalar ou domiciliar com monitor portátil.",
+    "source_chunk_id": "hipertensão_arterial_sistêmica_protocolo_chunk_25",
+    "category": "hipertensão_secundária"
+  }
+]
