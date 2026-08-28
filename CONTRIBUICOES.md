@@ -12,6 +12,14 @@ Desenvolvi o pipeline responsável por ler os chunks previamente gerados, transf
 
 Também desenvolvi testes unitários utilizando mocks para simular o comportamento do modelo de embeddings, garantindo que o pipeline gerasse corretamente o arquivo de saída e preservasse todas as informações necessárias para as próximas etapas do sistema. Por fim, atualizei a documentação do projeto com as instruções de execução da etapa de embeddings.
 
+Como aprofundamento da contribuição, implementei uma etapa de avaliação dos embeddings com o objetivo de analisar o impacto do modelo escolhido na qualidade da recuperação semântica. Para isso, foi criada uma base de avaliação contendo oito consultas relacionadas ao conteúdo dos documentos, cada uma associada ao chunk considerado relevante. A partir dessas consultas, foram utilizadas as métricas Hit@1, Hit@3, Hit@5 e MRR (Mean Reciprocal Rank) para avaliar a posição dos chunks relevantes nos resultados retornados.
+
+Além do modelo inicialmente utilizado, `paraphrase-multilingual-MiniLM-L12-v2`, foi avaliado o modelo `distiluse-base-multilingual-cased-v2`, permitindo realizar uma comparação objetiva entre diferentes modelos de embeddings utilizando o mesmo conjunto de consultas e os mesmos critérios de avaliação.
+
+Os resultados obtidos demonstraram vantagem do modelo `paraphrase-multilingual-MiniLM-L12-v2` no conjunto de avaliação utilizado. O modelo apresentou Hit@1 de 0,375, Hit@3 de 0,375, Hit@5 de 0,375 e MRR de aproximadamente 0,385. Já o modelo `distiluse-base-multilingual-cased-v2` apresentou Hit@1 de 0,000, Hit@3 de 0,250, Hit@5 de 0,250 e MRR de aproximadamente 0,125.
+
+Considerando os oito casos avaliados, o modelo `paraphrase-multilingual-MiniLM-L12-v2` posicionou o chunk relevante em primeiro lugar em três consultas, enquanto o modelo `distiluse-base-multilingual-cased-v2` não apresentou nenhum caso de acerto em primeiro lugar. Além disso, o primeiro modelo apresentou desempenho superior também em Hit@3, Hit@5 e MRR. Esses resultados fornecem uma justificativa experimental para a manutenção do modelo inicialmente escolhido no projeto.
+
 Principais entregas:
 - Implementação do pipeline de geração de embeddings
 - Integração com o modelo Sentence Transformers (paraphrase-multilingual-MiniLM-L12-v2)
@@ -20,12 +28,22 @@ Principais entregas:
 - Organização modular do carregamento do modelo e da geração dos vetores
 - Testes unitários para validação da etapa de embeddings
 - Atualização da documentação de execução
+- Criação de uma base de consultas para avaliação da recuperação semântica
+- Implementação das métricas Hit@1, Hit@3, Hit@5 e MRR
+- Comparação entre diferentes modelos de embeddings
+- Análise dos resultados para justificar tecnicamente a escolha do modelo
 
 #### Reflexão
 
 Durante o desenvolvimento, compreendi melhor como os embeddings representam o significado dos textos e por que essa etapa é essencial para que o sistema encontre trechos relevantes mesmo quando a pergunta do usuário utiliza palavras diferentes das presentes nos documentos.
 
 Além do aprendizado sobre modelos de embeddings e busca semântica, também adquiri experiência na organização de código modular, na criação de testes unitários utilizando mocks e na integração de bibliotecas voltadas para Inteligência Artificial. Essa atividade reforçou minha compreensão sobre o funcionamento interno de pipelines RAG, principalmente sobre a relação entre chunking, geração de embeddings e busca semântica, e mostrou como cada etapa influencia diretamente a qualidade das respostas que serão geradas pelo assistente clínico.
+
+A etapa de avaliação também permitiu compreender que a escolha de um modelo de embeddings não deve ser baseada apenas em suas características ou na facilidade de integração, mas pode ser analisada experimentalmente de acordo com o comportamento apresentado nas consultas do próprio domínio da aplicação. A comparação realizada mostrou que, no conjunto de avaliação utilizado, o `paraphrase-multilingual-MiniLM-L12-v2` apresentou resultados superiores ao `distiluse-base-multilingual-cased-v2` em todas as métricas consideradas.
+
+A análise também mostrou a importância de utilizar métricas de recuperação, pois apenas observar se uma busca encontrou ou não um resultado não seria suficiente para compreender a posição do chunk relevante no ranking. O uso conjunto de Hit@1, Hit@3, Hit@5 e MRR permitiu analisar tanto os acertos nas primeiras posições quanto a posição média dos resultados relevantes.
+
+Como limitação, a avaliação foi realizada com um conjunto inicial de oito consultas, portanto os resultados representam o comportamento dos modelos nesse conjunto específico e não devem ser interpretados como uma avaliação definitiva de qualidade para todos os possíveis cenários do sistema. Ainda assim, a comparação fornece uma evidência inicial para justificar tecnicamente a escolha do modelo utilizado no projeto e estabelece uma base que pode ser ampliada posteriormente com mais consultas e diferentes tipos de perguntas.
 
 ### **Cleidyanne Castro Pereira**
 
